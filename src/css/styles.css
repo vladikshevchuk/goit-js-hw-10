@@ -18,3 +18,36 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+ul {
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.name-country {
+  margin-left: 20px;
+}
+
+.title {
+  display: flex;
+}
+
+h2 {
+  font-size: 50px;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+span {
+  font-weight: normal;
+}

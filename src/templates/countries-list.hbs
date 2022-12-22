@@ -1,10 +1,10 @@
-{{#each country}}
+{{#each this}}
     <li class="country">
         <div class="country-img">
-            <img src="{{flags.svg}}" alt="{{name.official}}">
+            <img src="{{flags.svg}}" alt="{{name.official}}" width="75px">
         </div>
         <div class="name-country">
-            <h2 class="title">{{name.official}}</h2>
+            <p>{{name.official}}</p>
         </div>
     </li>
 {{/each}}
