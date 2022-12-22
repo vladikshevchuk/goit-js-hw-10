@@ -6,6 +6,10 @@
     <div class="description">
         <p>Capital: <span>{{capital}}</span></p>
         <p>Population: <span>{{population}}</span></p>
-        <p>Languages: <span>{{languages}}</span></p>
+        <div>Languages:
+            {{#each languages}}
+            <span>{{this}}</span>
+            {{/each}}
+        </div>
     </div>
 {{/each}}

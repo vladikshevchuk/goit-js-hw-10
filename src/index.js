@@ -1,4 +1,5 @@
 import './css/styles.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import debounce from "lodash.debounce";
 import { fetchCountries } from './js/fetchCountries';
 import { checkName } from './js/checkName';
@@ -22,15 +23,9 @@ function searchCountry(evt) {
 
     const country = textContent.trim();
 
-    fetchCountries(country)
-    .then((country) => {
-      try {
-        checkName(country);
-      } catch (error) {
-        console.log(error);
-      }
-    })
-    .catch((error) =>
-      Notify.failure("Oops, there is no country with that name", error)
-    );
+    fetchCountries(country).then(country => {
+        if (country) {
+            checkName(country);
+        }
+    }).catch(error => Notify.failure("Oops, there is no country with that name", error));
 }
